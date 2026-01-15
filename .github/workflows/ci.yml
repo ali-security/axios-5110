@@ -54,8 +54,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-        if: steps.changed-ignored.outputs.only_modified == 'false'
       - run: npm ci
-        if: steps.changed-ignored.outputs.only_modified == 'false'
       - run: npm test
-        if: steps.changed-ignored.outputs.only_modified == 'false'
